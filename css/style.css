@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.2;
+  background-color: #1c1c1c;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.calc {
+
+  background-image:url("/img/Frame1.png");
+  background-repeat: no-repeat;
+  padding: 1rem;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  max-width: 324px;
+  background-color: #1c1c1c;
+  padding-bottom: 236px;
+  
+}
+
+.calc1 {
+  margin-top: 54px;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  max-width: 324px;
+  
+}
+.top-speaker {
+  height: 20px;
+  width: 50%;
+  background: black;
+  margin: auto;
+  border-radius: 9px;
+  border: 1px solid #eeeeee;
+  
+}
+.calc-screen {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  margin-right: 14px;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 5px;
+  overflow-y: auto;
+  
+}
+
+.calc-grid {
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn-span {
+  grid-area: 5 / 1 / 5 / span 2;
+  width: 100%;
+}
+
+button {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  height: 55.5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 65.5px;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+  button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 200px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  button:hover:after {
+    opacity: 0.25;
+  }
+
+  button.ligth {
+    background-color: #a5a5a5;
+    color: #1c1c1c;
+  }
+
+  button.action {
+    background-color: #ff9503;
+  }
+    button:not(:last-child):focus {
+      background-color: #fff;
+      color: #ff9503;
+    }
+  
+
